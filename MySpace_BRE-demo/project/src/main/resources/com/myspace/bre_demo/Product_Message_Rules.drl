@@ -1,0 +1,16 @@
+package com.myspace.bre_demo;
+import com.myspace.bre_demo.RLCustomer;
+
+/*rule "Common_Validation_RenamedAPI_CR011"
+	when
+		f2 : RLCustomer(age >= 18);
+	then
+		f2.setMessage( "Customer is eligible to get VAS" );
+end*/
+
+rule "Common_Validation_RenamedAPI_CR012"
+	when
+		f2 : RLCustomer(age < 18);
+	then
+		f2.setMessage( "Customer is not eligible to get VAS" );
+end

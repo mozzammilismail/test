@@ -1,0 +1,10 @@
+package com.myspace.bre_demo;
+import com.myspace.bre_demo.RLCustomer;
+
+rule "Common_Validation_RenamedAPI_CR014"
+salience 0
+	when
+		f1 : RLCustomer(age >= 60);
+	then
+		f1.setMessage( "Customer is eligible to get free VAS" );
+end
